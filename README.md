@@ -6,7 +6,7 @@
 
 ## How to install
 - Create a zip file of the MFVaultApplicationTemplate folder
-- Save the zip file in <user>/Documents/Visual Studio <version>/Templates/Project Templates/Visual C#. Don't unzip.
+- Save the zip file in (user)/Documents/Visual Studio (version)/Templates/Project Templates/Visual C#. Don't unzip.
 - Restart Visual Studio
 - Click New>Project
 - Find the M-Files Vault Application option
