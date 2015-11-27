@@ -1,0 +1,38 @@
+<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Project">
+  <TemplateData>
+    <Name>M-Files Vault Application</Name>
+    <Description>A template for creating a Vault Application for M-Files.</Description>
+    <ProjectType>CSharp</ProjectType>
+    <ProjectSubType>
+    </ProjectSubType>
+    <SortOrder>1000</SortOrder>
+    <CreateNewFolder>true</CreateNewFolder>
+    <DefaultName>MFVaultApplication</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <LocationField>Enabled</LocationField>
+    <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+    <Icon>__TemplateIcon.ico</Icon>
+  </TemplateData>
+  <TemplateContent>
+    <Project TargetFileName="$safeprojectname$.csproj" File="$safeprojectname$.csproj" ReplaceParameters="true">
+      <ProjectItem ReplaceParameters="true" TargetFileName="appdef.xml">appdef.xml</ProjectItem>
+      <ProjectItem ReplaceParameters="false" TargetFileName="MFVaultApplicationInstaller.exe">MFVaultApplicationInstaller.exe</ProjectItem>
+      <Folder Name="Properties" TargetFolderName="Properties">
+        <ProjectItem ReplaceParameters="true" TargetFileName="AssemblyInfo.cs">AssemblyInfo.cs</ProjectItem>
+      </Folder>
+	  <Folder Name="src" TargetFolderName="src">
+		<ProjectItem ReplaceParameters="true" TargetFileName="VaultApplication.cs">VaultApplication.cs</ProjectItem>
+	  </Folder>
+    </Project>
+  </TemplateContent>
+  <WizardExtension>
+    <Assembly>NuGet.VisualStudio.Interop, Version=1.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</Assembly>
+    <FullClassName>NuGet.VisualStudio.TemplateWizard</FullClassName>
+  </WizardExtension>
+  <WizardData>
+    <packages repository="template">
+      <package id="MFiles.VAF" version="1.0.127.0" targetFramework="net45" />
+      <package id="Newtonsoft.Json" version="6.0.8" targetFramework="net45" />
+    </packages>
+  </WizardData>
+</VSTemplate>
